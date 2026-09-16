@@ -1,0 +1,23 @@
+Marlin 2.1.2.8 - MKS Monster8 V2.0 - MKS TS35 V2.0
+UI moderna TFT_COLOR_UI / TOUCH_SCREEN
+
+Alteracoes desta revisao:
+- Home 3x3 volta a usar icones grandes de 64x64 nos cards.
+- Texto dos cards usa Helvetica12Bold para caber sem extrapolar o card.
+- Botoes da UI personalizada tambem usam fonte menor para evitar texto fora dos limites.
+- Navegacao de telas usa MENU_SCREEN; comandos continuam BUTTON.
+- Menus nativos Temperatura, Movimento, Configuracao e Informacoes permanecem como telas reais do Marlin.
+- Barra inferior ajustada para Y=284..319 (36 px), eliminando a faixa vazia inferior da UI personalizada.
+- Home usa cards em Y=52/142/232 com altura 88, terminando exatamente em Y=320.
+- Painel de telemetria permanece com icones pequenos para nao sobrepor os textos.
+- M25 usa queue.inject(F("M25")); nao usa M25_STR.
+- Nenhuma dependencia de pasta assets.
+
+Validacoes estaticas feitas:
+- chaves no bloco customizado: balanceadas
+- parenteses no arquivo: balanceados
+- M25_STR: 0 ocorrencias
+- modern_action_button: 0 ocorrencias
+- controles MENU_SCREEN e BUTTON separados conforme funcao
+
+Observacao: o toolchain PlatformIO/STM32 nao esta instalado neste ambiente; portanto nao foi possivel executar o build mks_monster8 aqui.
